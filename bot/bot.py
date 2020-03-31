@@ -27,7 +27,9 @@ async def on_message(message):
         await message.channel.send('meow!')
     if message.content.startswith('!due'):
         await message.channel.send('CMSC 202 Due Dates:\n \
-        Lab 8 - Thursday, March 26th on GL\n \
+        Lab 9 - Thursday, April 2nd on GL\n \
+        Lab 10 - Thursday, April 9th on GL\n \
+        Lab 11 - Thursday, April 16th on GL\n \
         Project 3 - Thursday, April 2nd @8:59pm on GL\n \
         Exam 2 - Thursday, April 9th on Blackboard\n')
     if message.content.startswith('!info'):
