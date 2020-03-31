@@ -1,6 +1,5 @@
 import os
 
-
 def get_globals():
     global token
     global prefix

@@ -46,7 +46,7 @@ async def on_message(message):
         @202Bot oh start\n \
         @202Bot end oh\n')
     if message.content.startswith('!office'):
-        file = discord.File("office2.png", filename="img/office2.png")
+        file = discord.File("../img/office2.png", filename="../img/office2.png")
         await message.channel.send("CMSC 202 Spring 2020 Office Hours", file=file)
     if message.content.startswith('!grade'):
         random.seed()
@@ -59,7 +59,7 @@ async def on_message(message):
         random.seed()
         choice = random.randint(0,4)
         runt = ["red", "yellow", "purple", "orange", "green"]
-        file = discord.File("img/"+runt[choice]+".png", filename=runt[choice]+".png")
+        file = discord.File("../img/"+runt[choice]+".png", filename="../img/"+runt[choice]+".png")
         await message.channel.send("You got a " + runt[choice] + " Runt!", file=file)
 
 if __name__ == '__main__':
