@@ -27,11 +27,13 @@ async def on_message(message):
         await message.channel.send('meow!')
     if message.content.startswith('!due'):
         await message.channel.send('CMSC 202 Due Dates:\n \
-        Lab 9 - Thursday, April 2nd on GL\n \
-        Lab 10 - Thursday, April 9th on GL\n \
         Lab 11 - Thursday, April 16th on GL\n \
-        Project 3 - Thursday, April 2nd @8:59pm on GL\n \
-        Exam 2 - Thursday, April 9th on Blackboard\n')
+        Lab 12 - Thursday, April 23rd on GL\n \
+        Lab 13 - Thursday, April 30th on GL\n \
+        Project 4 - Tuesday, April 24th @8:59pm on GL\n \
+        Final Exam - Friday, May 15th on Blackboard\n')
+    if message.content.startswith('!voice'):
+        await message.channel.send('Hi there. Do you have a microphone or laptop? If so, can you please go to Voice chat?')
     if message.content.startswith('!info'):
         await message.channel.send('CMSC 202 Office Hours:\n \
         When office hours are available, you can request help\n \
