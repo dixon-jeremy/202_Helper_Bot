@@ -30,7 +30,7 @@ async def on_message(message):
         Lab 11 - Thursday, April 16th on GL\n \
         Lab 12 - Thursday, April 23rd on GL\n \
         Lab 13 - Thursday, April 30th on GL\n \
-        Project 4 - Tuesday, April 24th @8:59pm on GL\n \
+        Project 4 - Tuesday, April 21st @8:59pm on GL\n \
         Final Exam - Friday, May 15th on Blackboard\n')
     if message.content.startswith('!voice'):
         await message.channel.send('Hi there. Do you have a microphone or laptop? If so, can you please go to Voice chat?')
