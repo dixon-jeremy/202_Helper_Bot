@@ -56,13 +56,19 @@ async def on_message(message):
         await message.channel.send('Your current grade is ' + str(grade) + '\nAlso, these are random.')
     if message.content.startswith('!drop'):
         await message.channel.send('Attempting withdraw from course...')
-        await message.channel.send('Failed. You can withdraw until Monday, April 6th')
+        await message.channel.send('Failed. You can withdraw until Wednesday, June 10th')
     if message.content.startswith('!runt'):
         random.seed()
         choice = random.randint(0,4)
         runt = ["red", "yellow", "purple", "orange", "green"]
         file = discord.File("bot/img/"+runt[choice]+".png", filename="bot/img/"+runt[choice]+".png")
         await message.channel.send("You got a " + runt[choice] + " Runt!", file=file)
+    if message.content.startswith('!mcdonaldland'):
+        random.seed()
+        choice = random.randint(0,4)
+        mcdonald = ["Ronald McDonald", "The Professor", "Big Mac", "Captain Crook", "Grimace", "Hamburgler And Fry Guys", "Mayor McCheese"]
+        file = discord.File("bot/img/"+mcdonald[choice]+".png", filename="bot/img/"+mcdonald[choice]+".PNG")
+        await message.channel.send("You got " + mcdonald[choice] + "!", file=file)
 
 if __name__ == '__main__':
     info = get_globals()
