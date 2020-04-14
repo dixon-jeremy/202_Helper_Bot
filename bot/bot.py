@@ -65,7 +65,7 @@ async def on_message(message):
         await message.channel.send("You got a " + runt[choice] + " Runt!", file=file)
     if message.content.startswith('!mcdonaldland'):
         random.seed()
-        choice = random.randint(0,8)
+        choice = random.randint(0,6)
         mcdonald = ["Ronald McDonald", "The Professor", "Big Mac", "Captain Crook", "Grimace", "Hamburgler And Fry Guys", "Mayor McCheese"]
         file = discord.File("bot/img/"+mcdonald[choice]+".png", filename="bot/img/"+mcdonald[choice]+".png")
         await message.channel.send("You got " + mcdonald[choice] + "!", file=file)
