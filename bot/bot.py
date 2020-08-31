@@ -2,7 +2,12 @@ from random import random
 
 import discord
 import random
-from globals import get_globals
+# from globals import get_globals
+import os
+
+import config
+
+token = config.BOT_TOKEN
 
 client = discord.Client()
 
@@ -27,11 +32,8 @@ async def on_message(message):
         await message.channel.send('meow!')
     if message.content.startswith('!due'):
         await message.channel.send('CMSC 202 Due Dates:\n \
-        Lab 12 - Thursday, April 23rd on GL\n \
-        Lab 13 - Thursday, April 30th on GL\n \
-        Project 4 (late2) - Thursday, April 23rd @8:59pm on GL\n \
-        Project 5 - Thursday, May 7th @8:59pm on GL\n \
-        Final Exam - Friday, May 15th on Blackboard\n')
+        Lab 1 - Sunday, September 13th on GL\n \
+        First Day Acknowledgement - Sunday, September 13th on Blackboard\n')
     if message.content.startswith('!voice'):
         await message.channel.send('Hi there. Do you have a microphone or laptop? If so, can you please go to Voice chat?')
     if message.content.startswith('!info'):
@@ -49,7 +51,7 @@ async def on_message(message):
         @202Bot end oh\n')
     if message.content.startswith('!office'):
         file = discord.File("bot/img/office2.png", filename="bot/img/office2.png")
-        await message.channel.send("CMSC 202 Spring 2020 Office Hours", file=file)
+        await message.channel.send("CMSC 202 Fall 2020 Office Hours", file=file)
     if message.content.startswith('!grade'):
         random.seed()
         grade = random.randint(0, 100)
@@ -71,8 +73,9 @@ async def on_message(message):
         await message.channel.send("You got " + mcdonald[choice] + "!", file=file)
 
 if __name__ == '__main__':
-    info = get_globals()
-    if info:
-        token = info['props']['token']
-        prefix = info['props']['prefix']
-        client.run(token)
+    #info = get_globals()
+    client.run(token)
+    #if info:
+    #    token = info['props']['token']
+    #    prefix = info['props']['prefix']
+    #    client.run(token)
