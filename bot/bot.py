@@ -33,6 +33,8 @@ async def on_message(message):
     if message.content.startswith('!due'):
         await message.channel.send('CMSC 202 Due Dates:\n \
         Lab 1 - Sunday, September 13th on GL\n \
+        Lab 2 - Sunday, September 13th on GL\n \
+        Lab 2 Prelab - Monday, September 7th on Blackboard\n \
         First Day Acknowledgement - Sunday, September 13th on Blackboard\n')
     if message.content.startswith('!voice'):
         await message.channel.send('Hi there. Do you have a microphone or laptop? If so, can you please go to Voice chat?')
@@ -49,6 +51,16 @@ async def on_message(message):
         To start and stop office hours use:\n \
         @202Bot oh start\n \
         @202Bot end oh\n')
+    if message.content.startswith('!FAQ'):
+        await message.channel.send('Common Questions in CMSC 202:\n \
+        1. Discussions/Labs \n \
+        We use the name Discussion and Lab interchangeably.\n \
+        For now, discussions are online. \n \
+        Your TA will be on Discord during your scheduled time to answer questions.\n \
+        2. Lab 1\n \
+        Due on Sunday, September 13th on GL\n \
+        Make sure your symbolic link works BEFORE the due date.\n \
+        If you took the course last semester, you do not need to recreate the link.')
     if message.content.startswith('!office'):
         file = discord.File("bot/img/office2.png", filename="bot/img/office2.png")
         await message.channel.send("CMSC 202 Fall 2020 Office Hours", file=file)
@@ -58,7 +70,7 @@ async def on_message(message):
         await message.channel.send('Your current grade is ' + str(grade) + '\nAlso, these are random.')
     if message.content.startswith('!drop'):
         await message.channel.send('Attempting withdraw from course...')
-        await message.channel.send('Failed. You can withdraw until Wednesday, June 10th')
+        await message.channel.send('Failed. You can withdraw until November 11th')
     if message.content.startswith('!runt'):
         random.seed()
         choice = random.randint(0,4)
